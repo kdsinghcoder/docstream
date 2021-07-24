@@ -24,7 +24,7 @@ This allows protecttext.com to be opened in one single click and start making no
 
 ### Second Inspiration
 
-> ** [codeshare](https://codeshare.io/)**
+> **[codeshare](https://codeshare.io/)**
 
 **Share Code in Real-time with Developers**
 
