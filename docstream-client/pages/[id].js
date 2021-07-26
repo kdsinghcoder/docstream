@@ -4,8 +4,35 @@ import dynamic from 'next/dynamic';
 import {io} from 'socket.io-client';
 import { useRouter } from "next/dist/client/router";
 import Router from "next/dist/next-server/server/router";
-
+import Button from "@material-tailwind/react/Button";
+import Icon from "@material-tailwind/react/Icon";
+import ShareModal from "../components/modal/ShareModal";
 const SAVE_INTERVAL_MS = 2000;
+const TOOLBAR_OPTIONS = [
+  [{ header: [1, 2, 3, 4, 5, 6, false] }],
+  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+  [{ font: [] }],
+  [{ list: "ordered" }, { list: "bullet" }],
+  ["bold", "italic", "underline",'strike'],
+  [{ color: [] }, { background: [] }],
+  [{ script: "sub" }, { script: "super" }],
+  [{ align: [] }],
+  ["image", "blockquote", "code-block"],
+  [{ 'size': ['small', 'normal', 'large', 'huge'] }],  // custom dropdown
+  ["clean"],
+  [{ 'direction': 'rtl' }],                         // text direction
+  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+
+]
+
+var toolbarOptions = [
+  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+
+
+];
+
+
 function Example() {
   
   const [socket, setSocket] = useState()
@@ -82,18 +109,7 @@ function Example() {
     const Quill = (await import("quill")).default;
     const q = new Quill(document.querySelector('#QuillEditor'), {
       modules: {
-        toolbar: [
-          ["bold", "italic"],
-          ["link", "blockquote", "code", "image"],
-          [
-            {
-              list: "ordered",
-            },
-            {
-              list: "bullet",
-            },
-          ],
-        ],
+        toolbar: TOOLBAR_OPTIONS
       },
       theme: "snow",
     });
@@ -107,9 +123,25 @@ function Example() {
 
 
   return (
-    <div className="p-4 w-2/3 mx-auto">
-      <div id="QuillEditor" className="bg-gray-100 p-3"/>
+    <>
+    <header className="flex justify-between items-center p-4 z-50 bg-white " p-3 pb-1>
+        <span onClick={() => router.push("/")} className="cursor-pointer">
+          <Icon name="description" size="5xl" color="blue" />
+        </span>
+        <div className="flex-grow px-2">
+          <h2>{documentId}</h2>
+        </div>
+
+        <ShareModal />
+        
+    <br />
+      </header>
+
+    <div className="mx-auto" id="container">
+      <div id="QuillEditor" className="bg-gray-100"/>
     </div>
+
+    </>
   );
 }
 
