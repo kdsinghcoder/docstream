@@ -3,6 +3,21 @@
 ![image](https://user-images.githubusercontent.com/50829119/124019279-7b67ef00-da06-11eb-80fd-3dcdf7a94bd5.png)
 
 # 👋 Introduction
+
+## DocStream
+DocStream full form is Document Stream, as name suggest DocStream allows **users to host their documents, allows access from anywhere, allws team mates to collaborate in real time.**
+
+**DocStream alows a 2 step solution to host documents which is the minimum I could be 😁.**
+
+- Enter any xxxx such that   **docstream/xxxx** is available if available its yours 
+- Edit Document or copy paste a local document to host online
+- You are done simply share the link with team or with friends
+- Note:- User have an option to secure the document by adding a password, others who want to access the link will have to enter the password.
+- Encrypt all your documents and passwords access them anywhere. 
+- Simple. Fast. Free. No ads. Secure - don't trust us, check the [code](https://github.com/kdsinghcoder/docstream) yourself.
+
+![image](https://user-images.githubusercontent.com/50829119/124019174-570c1280-da06-11eb-874f-d6fbd72a8f1f.png)
+
 The idea for downstream evolved from Three different apps let's first discuss them separately.
 
 ## Idea Discussion 
@@ -38,18 +53,5 @@ This allows protecttext.com to be opened in one single click and start making no
 - can be accessed from everywhere
 - allows user to collaborate
 
-## DocStream
-DocStream full form is Document Stream, as name suggest DocStream allows **users to host their documents, allows access from anywhere, allws team mates to collaborate in real time.**
-
-**DocStream alows a 2 step solution to host documents which is the minimum I could be 😁.**
-
-- Enter any xxxx such that   **docstream/documents/xxxx** is available if available its yours 
-- Edit Document or copy paste a local document to host online
-- You are done simply share the link with team or with friends
-- Note:- User have an option to secure the document by adding a password, others who want to access the link will have to enter the password.
-- Encrypt all your documents and passwords access them anywhere. 
-- Simple. Fast. Free. No ads. Secure - don't trust us, check the [code](https://github.com/kdsinghcoder/docstream) yourself.
-
-![image](https://user-images.githubusercontent.com/50829119/124019174-570c1280-da06-11eb-874f-d6fbd72a8f1f.png)
 
 
