@@ -7,7 +7,7 @@ import Video from "../components/LandingPage/Video";
 import Faq from "../components/LandingPage/Faq";
 import Footer from "../components/LandingPage/Footer";
 import Contact from "../components/LandingPage/Contact";
-
+import {React, useEffect, useState} from 'react';
 export default function Home() {
   return (
     <>

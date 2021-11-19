@@ -1,3 +1,8 @@
+import GetStarted_modal from "../modal/GetStarted_modal";
+import Quixk_share_modal from "../modal/Quixk_share_modal";
+
+
+
 function Hero() {
     return (
         <section class="text-gray-400 bg-gray-900 body-font">
@@ -7,9 +12,11 @@ function Hero() {
               <br class="hidden lg:inline-block" />readymade gluten
             </h1>
             <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-              <button class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">Get Started</button>
-              <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Quick Share</button>
+            <div class="flex justify-center space-x-6">
+              <GetStarted_modal text="Get Started" color="blueGray"/>
+              
+              <Quixk_share_modal text="Quick Share" color="blueGray"/>
+
             </div>
           </div>
           <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">

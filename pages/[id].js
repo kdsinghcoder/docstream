@@ -7,6 +7,7 @@ import Router from "next/dist/next-server/server/router";
 import Button from "@material-tailwind/react/Button";
 import Icon from "@material-tailwind/react/Icon";
 import ShareModal from "../components/modal/ShareModal";
+
 const SAVE_INTERVAL_MS = 2000;
 const TOOLBAR_OPTIONS = [
   [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -124,7 +125,7 @@ function Example() {
 
   return (
     <>
-    <header className="flex justify-between items-center p-4 z-50 bg-white " p-3 pb-1>
+    <header className="flex justify-between items-center p-4 z-50 bg-white " p-3 pb-1="true">
         <span onClick={() => router.push("/")} className="cursor-pointer">
           <Icon name="description" size="5xl" color="blue" />
         </span>
@@ -132,8 +133,7 @@ function Example() {
           <h2>{documentId}</h2>
         </div>
 
-        <ShareModal />
-        
+        <ShareModal text="share" />        
     <br />
       </header>
 

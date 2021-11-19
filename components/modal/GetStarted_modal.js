@@ -4,8 +4,16 @@ import ModalHeader from "@material-tailwind/react/ModalHeader";
 import ModalBody from "@material-tailwind/react/ModalBody";
 import ModalFooter from "@material-tailwind/react/ModalFooter";
 import Button from "@material-tailwind/react/Button";
+import Input from "@material-tailwind/react/Input";
+import Link from 'next/link'
+import Alert from "@material-tailwind/react/Alert";
+import Popover from "@material-tailwind/react/Popover";
+import PopoverContainer from "@material-tailwind/react/PopoverContainer";
+import PopoverHeader from "@material-tailwind/react/PopoverHeader";
+import PopoverBody from "@material-tailwind/react/PopoverBody";
 
-export default function GetStarted_modal() {
+
+function GetStarted_modal(props) {
     const [showModal, setShowModal] = React.useState(false);
 
     return (
@@ -13,44 +21,60 @@ export default function GetStarted_modal() {
             <Button
                 color="green"
                 type="button"
-                onClick={(e) => setShowModalCode(true)}
+                onClick={(e) => setShowModal(true)}
+                // onClick={(e) => setShowModal(true)}
                 ripple="light"
             >
-                Open small Modal
+                {props.text}
             </Button>
 
             <Modal size="sm" active={showModal} toggler={() => setShowModal(false)}>
+                <br></br>
                 <ModalHeader toggler={() => setShowModal(false)}>
-                    Modal Title
+                    Enter your prefered url
                 </ModalHeader>
                 <ModalBody>
-                    <p className="text-base leading-relaxed text-gray-600 font-normal">
-                        I always felt like I could do anything. That’s the main thing people
-                        are controlled by! Thoughts- their perception of themselves! They're
-                        slowed down by their perception of themselves. If you're taught you
-                        can’t do anything, you won’t do anything. I was taught I could do
-                        everything.
-                    </p>
+                    <Alert color="lightGreen">docstreme/xxxxxxxx</Alert>
+                    <Input
+                        type="text"
+                        color="green"
+                        size="lg"
+                        outline={true}
+                        placeholder="Enter xxxxxxxx"
+                    />
+                    <br></br>
+                    <Input
+                        type="password"
+                        color="green"
+                        size="lg"
+                        outline={true}
+                        placeholder="Enter your password"
+
+                    />
+
                 </ModalBody>
                 <ModalFooter>
-                    <Button 
+                    <Button
                         color="red"
                         buttonType="link"
-                        onClick={(e) => setShowModalCode(false)}
+                        onClick={(e) => setShowModal(false)}
                         ripple="dark"
                     >
                         Close
                     </Button>
-
-                    <Button
-                        color="green"
-                        onClick={(e) => setShowModalCode(false)}
-                        ripple="light"
-                    >
-                        Save Changes
-                    </Button>
+                    <Link href="/karan">
+                        <Button
+                            color="green"
+                            onClick={(e) => setShowModal(false)}
+                            ripple="light"
+                        >
+                            Submit
+                        </Button>
+                    </Link>
                 </ModalFooter>
             </Modal>
         </>
     );
 }
+
+export default GetStarted_modal;
