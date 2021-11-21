@@ -29,6 +29,7 @@ Running the project on local system is **strongly recommended**, even if you are
 - Details to install the client side code 
   - Clone the repository to your system using `git clone https://github.com/kdsinghcoder/docstream`
   - Now open the cloned repository using `cd docstream`
+  - Install yarn globally `npm install --global yarn` or find alternative ways [here](https://classic.yarnpkg.com/en/docs/install#windows-stable)
   - The project depends on numerous npm packages. Install them using `yarn install` or `npm install`
   - Run `yarn dev` or `npm run dev` to launch a development server.
   - Open [localhost:3000](http://localhost:3000) and ensure that the server is running.
