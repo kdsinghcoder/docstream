@@ -23,8 +23,9 @@ function Nav() {
             <a class="mr-5 hover:text-white">Third Link</a>
             <a class="mr-5 hover:text-white">Fourth Link</a>
           </nav>
+          <a href="/signup">
           <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
-            Button
+            SignUp
             <svg
               fill="none"
               stroke="currentColor"
@@ -37,6 +38,7 @@ function Nav() {
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
           </button>
+          </a>
         </div>
       </header>
     )

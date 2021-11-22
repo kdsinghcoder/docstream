@@ -29,7 +29,7 @@ function Quixk_share_modal(props) {
                     <PopoverHeader>Note :</PopoverHeader>
                     <PopoverBody>
                         <Alert color="green">Site will be available only for 24Hr from now</Alert>
-                        <Link href="/56234">
+                        <Link href="quick/56234">
                             <Button
                                 color="lightGreen"
                                 buttonType="filled"
