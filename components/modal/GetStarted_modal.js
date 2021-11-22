@@ -15,14 +15,13 @@ import PopoverBody from "@material-tailwind/react/PopoverBody";
 
 function GetStarted_modal(props) {
     const [showModal, setShowModal] = React.useState(false);
-
+    const [siteName, setSiteName] = React.useState('');
     return (
         <>
             <Button
                 color="green"
                 type="button"
                 onClick={(e) => setShowModal(true)}
-                // onClick={(e) => setShowModal(true)}
                 ripple="light"
             >
                 {props.text}
@@ -40,18 +39,11 @@ function GetStarted_modal(props) {
                         color="green"
                         size="lg"
                         outline={true}
+                        name="sitename"
                         placeholder="Enter xxxxxxxx"
+                        onChange={(evt) => { setSiteName(evt.target.value); }}
                     />
                     <br></br>
-                    <Input
-                        type="password"
-                        color="green"
-                        size="lg"
-                        outline={true}
-                        placeholder="Enter your password"
-
-                    />
-
                 </ModalBody>
                 <ModalFooter>
                     <Button
@@ -62,7 +54,7 @@ function GetStarted_modal(props) {
                     >
                         Close
                     </Button>
-                    <Link href="/karan">
+                    <Link href={"/"+siteName}>
                         <Button
                             color="green"
                             onClick={(e) => setShowModal(false)}

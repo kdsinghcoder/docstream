@@ -6,12 +6,12 @@ import { useRouter } from "next/dist/client/router";
 import Router from "next/dist/next-server/server/router";
 import Button from "@material-tailwind/react/Button";
 import Icon from "@material-tailwind/react/Icon";
-import ShareModal from "../components/modal/ShareModal";
+import ShareModal from "../../components/modal/ShareModal";
 import Modal from "@material-tailwind/react/Modal";
 import ModalHeader from "@material-tailwind/react/ModalHeader";
 import ModalBody from "@material-tailwind/react/ModalBody";
-import { useUser } from '../lib/hooks';
-import Form from '../components/form';
+import { useUser } from '../../lib/hooks';
+import Form from '../../components/form';
 import Alert from "@material-tailwind/react/Alert";
 import H4 from "@material-tailwind/react/Heading4";
 
@@ -41,39 +41,6 @@ var toolbarOptions = [
 
 
 function Example() {
-
-  // login part of logic
-  const [showModal, setShowModal] = React.useState(true);
-
-  // useUser({ redirectTo: false , redirectIfFound: false });
-
-  const [errorMsg, setErrorMsg] = useState('');
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    if (errorMsg) setErrorMsg('');
-    const body = {
-      username: e.currentTarget.username.value,
-      password: e.currentTarget.password.value,
-    };
-    try {
-      const res = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
-      if (res.status === 200) {
-        // Router.push('/'+documentId);
-        setShowModal(false);
-      } else {
-        throw new Error(await res.text());
-      }
-    } catch (error) {
-      console.error('An unexpected error happened occurred:', error);
-      setErrorMsg(error.message);
-    }
-  }
-  //login part ends 
 
   const [socket, setSocket] = useState()
   const [quill, setQuill] = useState()
@@ -156,14 +123,7 @@ function Example() {
 
   return (
     <>
-      <Modal size="lg" active={showModal}>
-        <ModalBody>
-          <H4>Login</H4>
-          <Form isLogin errorMessage={errorMsg} onSubmit={handleSubmit} id_username={documentId} />
-        </ModalBody>
-      </Modal>
-
-      <header className={`flex justify-between items-center p-4 z-50 bg-white ${showModal ? 'blur-lg': ''}`} p-3 pb-1="true">
+     <header className={`flex justify-between items-center p-4 z-50 bg-white ${false ? 'blur-lg': ''}`} p-3 pb-1="true">
         <span onClick={() => router.push("/")} className="cursor-pointer">
           <Icon name="description" size="5xl" color="blue" />
         </span>
@@ -175,7 +135,7 @@ function Example() {
         <br />
       </header>
 
-      <div className={`mx-auto ${showModal ? 'blur-lg': ''}`} id="container" >
+      <div className={`mx-auto ${false ? 'blur-lg': ''}`} id="container" >
         <div id="QuillEditor" className="bg-gray-100" />
       </div>
     </>
