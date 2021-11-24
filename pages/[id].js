@@ -15,6 +15,9 @@ import Form from '../components/form';
 import Alert from "@material-tailwind/react/Alert";
 import H4 from "@material-tailwind/react/Heading4";
 
+import { saveAs } from 'file-saver';
+import { pdfExporter } from 'quill-to-pdf';
+// import * as quill from 'quilljs';
 
 const SAVE_INTERVAL_MS = 2000;
 const TOOLBAR_OPTIONS = [
@@ -152,6 +155,12 @@ function Example() {
     setQuill(q);
   }, []);
 
+  //Export Function 
+  async function export_pdf() {
+    const delta = quill.getContents(); // gets the Quill delta
+    const pdfAsBlob = await pdfExporter.generatePdf(delta); // converts to PDF
+    saveAs(pdfAsBlob, 'pdf-export.pdf'); // downloads from the browser
+}
 
 
   return (
@@ -170,7 +179,22 @@ function Example() {
         <div className="flex-grow px-2">
           <h2>{documentId}</h2>
         </div>
-
+        <Button
+            color="lightBlue"
+            buttonType="filled"
+            size="regular"
+            rounded={false}
+            block={false}
+            iconOnly={false}
+            ripple="light"
+            onClick={() => {
+              export_pdf();
+          }}
+          className="mx-12"
+        >
+            Export as Encripted PDF
+        </Button>
+        
         <ShareModal text="share" />
         <br />
       </header>
