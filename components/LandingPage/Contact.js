@@ -1,10 +1,10 @@
 function Contact() {
     return (
-        <section class="text-gray-400 bg-gray-900 body-font relative">
+        <section id="Contact" class="text-gray-400 bg-gray-900 body-font relative">
             <div class="container px-5 py-24 mx-auto">
                 <div class="flex flex-col text-center w-full mb-12">
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Contact Us</h1>
-                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Have a Query? Feel free to reach out to us by filling in the form below</p>
                 </div>
                 <div class="lg:w-1/2 md:w-2/3 mx-auto">
                     <div class="flex flex-wrap -m-2">
@@ -30,9 +30,9 @@ function Contact() {
                             <button class="flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Button</button>
                         </div>
                         <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
-                            <a class="text-green-400">example@email.com</a>
-                            <p class="leading-normal my-5">49 Smith St.
-                                <br />Saint Cloud, MN 56301
+                            <a class="text-green-400">docstreamsupport@gmail.com</a>
+                            <p class="leading-normal my-5">VIT Vellore, Katpadi
+                                <br />Vellore, TN, India
                             </p>
                             <span class="inline-flex">
                                 <a class="text-gray-500">
