@@ -42,12 +42,12 @@ const Signup = () => {
 
   return (
     <>
-      <section class="overflow-hidden">
-        <div class="flex min-h-screen overflow-hidden">
-          <div class="relative flex-1 bg-gray-900 hidden w-0 overflow-hidden lg:block">
-            <img class="absolute inset-0 object-cover w-full h-full" src="https://i.imgur.com/Dn7UZFx.png" alt=""></img>
+      <section className="overflow-hidden">
+        <div className="flex min-h-screen overflow-hidden">
+          <div className="relative flex-1 bg-gray-900 hidden w-0 overflow-hidden lg:block">
+            <img className="absolute inset-0 object-cover w-full h-full" src="https://i.imgur.com/Dn7UZFx.png" alt=""></img>
           </div>
-          <div class="
+          <div className="
         flex flex-col
         justify-center
         flex-1
@@ -58,16 +58,16 @@ const Signup = () => {
         lg:flex-none lg:px-20
         xl:px-24
       ">
-            <div class="w-full max-w-xl mx-auto lg:w-96">
+            <div className="w-full max-w-xl mx-auto lg:w-96">
               <div>
-                <h2 class="mt-6 text-3xl font-extrabold text-neutral-600"> Sign Up </h2>
+                <h2 className="mt-6 text-3xl font-extrabold text-neutral-600"> Sign Up </h2>
               </div>
-              <div class="mt-8">
-                <div class="mt-6">
+              <div className="mt-8">
+                <div className="mt-6">
                   <Form isLogin={false} errorMessage={errorMsg} onSubmit={handleSubmit} />
-                  <div class="relative my-4">
-                    <div class="absolute inset-0 flex items-center">
-                      <div class="w-full border-t border-gray-300"></div>
+                  <div className="relative my-4">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t border-gray-300"></div>
                     </div>
                   </div>
                   <div>
