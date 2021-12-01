@@ -20,7 +20,7 @@ function Hero() {
             </div>
           </div>
           <div data-aos="fade-up" class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://i.imgur.com/GPgj08v.png" />
+            <img class="object-cover object-center rounded" alt="hero" src="https://i.imgur.com/IHkOirD.png" />
           </div>
         </div>
       </section>

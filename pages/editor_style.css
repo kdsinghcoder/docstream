@@ -35,7 +35,7 @@
     top: 75px;
     z-index: 1;
     background-color: white;
-    border-top: ipx solid black;
+    border-top: 1px solid black;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
     width: 100%;
   }
@@ -43,20 +43,33 @@
 
   
   @page {
-    margin: 1in;
+    margin: none;
   }
   
   @media print {
+    body::-webkit-scrollbar{
+      display: none;
+    }
+    html{
+      overflow: hidden;
+    }
+
     body {
       background: none;
+      overflow: hidden;
+    }
+
+   #__next header{
+      display: none;
     }
   
-    #containerr .ql-editor {
+    #container .ql-editor {
       width: 6.5in;
-      height: 9in;
+      height: 100%;
       padding: 0;
       box-shadow: none;
       align-self: flex-start;
+      margin: none;
     }
   
     #container .ql-toolbar.ql-snow {

@@ -15,8 +15,8 @@ import Form from '../components/form';
 import Alert from "@material-tailwind/react/Alert";
 import H4 from "@material-tailwind/react/Heading4";
 
-import { saveAs } from 'file-saver';
-import { pdfExporter } from 'quill-to-pdf';
+// import { saveAs } from 'file-saver';
+// import { pdfExporter } from 'quill-to-pdf';
 // import * as quill from 'quilljs';
 
 const SAVE_INTERVAL_MS = 2000;
@@ -155,12 +155,20 @@ function Example() {
     setQuill(q);
   }, []);
 
-  //Export Function 
-  async function export_pdf() {
-    const delta = quill.getContents(); // gets the Quill delta
-    const pdfAsBlob = await pdfExporter.generatePdf(delta); // converts to PDF
-    saveAs(pdfAsBlob, 'pdf-export.pdf'); // downloads from the browser
-}
+  // Export Function 
+//   async function export_pdf() {
+//     const delta = quill.getContents(); // gets the Quill delta
+//     const pdfAsBlob = await pdfExporter.generatePdf(delta); // converts to PDF
+//     saveAs(pdfAsBlob, 'pdf-export.pdf'); // downloads from the browser
+// }
+
+  // async function print_pdf(){
+  //   var printContents = document.getElementById("QuillEditor").innerHTML;
+  //   var myWindow=window.open("");
+  //   myWindow.document.body.innerHTML='<div id="pdf_m">' + printContents + "</div>";
+  //   myWindow.document.getElementById("pdf_m").style.margin = "50px 10px 20px 30px";
+  //   myWindow.print();
+  // }
 
 
   return (
@@ -187,12 +195,16 @@ function Example() {
             block={false}
             iconOnly={false}
             ripple="light"
-            onClick={() => {
-              export_pdf();
+          //   onClick={() => {
+          //     export_pdf();
+          // }}
+          onClick={()=> {
+            // print_pdf();
+            window.print();
           }}
           className="mx-12"
         >
-            Export as Encripted PDF
+            Export as PDF
         </Button>
         
         <ShareModal text="share" />

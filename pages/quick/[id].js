@@ -120,6 +120,13 @@ function Example() {
   }, []);
 
 
+  async function print_pdf(){
+    var printContents = document.getElementById("QuillEditor").innerHTML;
+    var myWindow=window.open("");
+    myWindow.document.body.innerHTML='<div id="pdf_m">' + printContents + "</div>";
+    myWindow.document.getElementById("pdf_m").style.margin = "50px 10px 20px 30px";
+    myWindow.print();
+  }
 
   return (
     <>
@@ -130,7 +137,22 @@ function Example() {
         <div className="flex-grow px-2">
           <h2>{documentId}</h2>
         </div>
-
+        <Button
+            color="lightBlue"
+            buttonType="filled"
+            size="regular"
+            rounded={false}
+            block={false}
+            iconOnly={false}
+            ripple="light"
+            onClick={() => {
+              // print_pdf();
+              window.print();
+          }}
+          className="mx-12"
+        >
+            Export as PDF
+        </Button>
         <ShareModal text="share" />
         <br />
       </header>

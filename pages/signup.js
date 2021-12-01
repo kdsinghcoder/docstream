@@ -44,8 +44,8 @@ const Signup = () => {
     <>
       <section class="overflow-hidden">
         <div class="flex min-h-screen overflow-hidden">
-          <div class="relative flex-1 hidden w-0 overflow-hidden lg:block">
-            <img class="absolute inset-0 object-cover w-full h-full bg-black" src="https://d33wubrfki0l68.cloudfront.net/1a058aec6e3d81efe3ac4ca6366b40574876f6bc/32bc1/images/placeholders/rectanglewide.svg" alt=""></img>
+          <div class="relative flex-1 bg-gray-900 hidden w-0 overflow-hidden lg:block">
+            <img class="absolute inset-0 object-cover w-full h-full" src="https://i.imgur.com/Dn7UZFx.png" alt=""></img>
           </div>
           <div class="
         flex flex-col
