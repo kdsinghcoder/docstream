@@ -1,6 +1,6 @@
 # Doc Stream
 
-![image](https://user-images.githubusercontent.com/50829119/124019279-7b67ef00-da06-11eb-80fd-3dcdf7a94bd5.png)
+![image](https://user-images.githubusercontent.com/50829119/174479315-a9d4405d-c35a-4c18-b19f-4ec7a3e69abd.png)
 
 # 👋 Introduction
 
@@ -16,7 +16,7 @@ DocStream full form is Document Stream, as name suggest DocStream allows **users
 - Encrypt all your documents and passwords access them anywhere. 
 - Simple. Fast. Free. No ads. Secure - don't trust us, check the [code](https://github.com/kdsinghcoder/docstream) yourself.
 
-![image](https://user-images.githubusercontent.com/50829119/124019174-570c1280-da06-11eb-874f-d6fbd72a8f1f.png)
+![image](https://user-images.githubusercontent.com/50829119/174479335-a8913cc2-c101-4dc1-80e6-a3446ca9440c.png)
 
 The idea for downstream evolved from Three different apps let's first discuss them separately.
 
@@ -67,6 +67,15 @@ This allows protecttext.com to be opened in one single click and start making no
 - no need to keep saving
 - can be accessed from everywhere
 - allows user to collaborate
+
+## Designs
+
+  ### Story Board
+  ![image](https://user-images.githubusercontent.com/50829119/174478944-f7f95a11-f848-4692-b9a1-29b969ccb35d.png)
+  
+  ### HTA
+  ![image](https://user-images.githubusercontent.com/50829119/174479005-5085be0a-3178-4a2d-bbd1-bf9fb30fa8c0.png)
+
 
 
 
